@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apertus-lab"
+version = "0.1.0"
+description = "Offline-first Apertus experiment foundation"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+apertus-lab = "apertus_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+apertus_lab = ["*.json"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

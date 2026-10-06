@@ -1,0 +1,77 @@
+{
+  "schema_version": "2.0",
+  "id": "multilingual-distraction-demo-v1",
+  "hypothesis": "Irrelevant context may reduce exact-output instruction adherence in English, German or French. This is a pipeline demonstration, not an established issue.",
+  "target": {
+    "model": "swiss-ai/Apertus-v1.5-70B",
+    "endpoint": "https://api.inference.cscs.ch/v1",
+    "revision": "unknown",
+    "service_version": "unknown"
+  },
+  "cases": [
+    {
+      "id": "en-control",
+      "pair": "en",
+      "role": "control",
+      "language": "en",
+      "prompt": "Return exactly the single word BLUE and nothing else.",
+      "expected": "BLUE"
+    },
+    {
+      "id": "en-probe",
+      "pair": "en",
+      "role": "probe",
+      "language": "en",
+      "prompt": "Unrelated archive note: a gardener planted three trees yesterday.\n\nReturn exactly the single word BLUE and nothing else.",
+      "expected": "BLUE"
+    },
+    {
+      "id": "de-control",
+      "pair": "de",
+      "role": "control",
+      "language": "de",
+      "prompt": "Gib genau das einzelne Wort BLUE und nichts anderes aus.",
+      "expected": "BLUE"
+    },
+    {
+      "id": "de-probe",
+      "pair": "de",
+      "role": "probe",
+      "language": "de",
+      "prompt": "Unverbundene Archivnotiz: Ein Gärtner hat gestern drei Bäume gepflanzt.\n\nGib genau das einzelne Wort BLUE und nichts anderes aus.",
+      "expected": "BLUE"
+    },
+    {
+      "id": "fr-control",
+      "pair": "fr",
+      "role": "control",
+      "language": "fr",
+      "prompt": "Réponds exactement par le seul mot BLUE, sans rien ajouter.",
+      "expected": "BLUE"
+    },
+    {
+      "id": "fr-probe",
+      "pair": "fr",
+      "role": "probe",
+      "language": "fr",
+      "prompt": "Note d’archive sans rapport : un jardinier a planté trois arbres hier.\n\nRéponds exactement par le seul mot BLUE, sans rien ajouter.",
+      "expected": "BLUE"
+    }
+  ],
+  "limits": {
+    "exploration_calls": 6,
+    "confirmation_calls": 12,
+    "max_input_chars": 2000,
+    "run_seconds": 600,
+    "request_seconds": 30
+  },
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 32
+  },
+  "confirmation": {
+    "repetitions": 2,
+    "min_probe_failures": 2
+  },
+  "evaluator": "exact-stripped-text-v1"
+}

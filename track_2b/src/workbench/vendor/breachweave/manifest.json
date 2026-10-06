@@ -1,0 +1,24 @@
+{
+  "source": "https://github.com/m-sec-org/BreachWeave",
+  "revision": "4ac5fc4c720ac74cf90968251cfae7cd28d3d62f",
+  "license": "Apache-2.0",
+  "modified": false,
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "packages/core/src/challenge/memory.ts",
+      "sha256": "0abf8dfc52bcb173aea90268cf875b160265023ff4392ba32b83c076c807000e"
+    },
+    {
+      "path": "packages/core/src/solver/extension/challenge-observer/types.ts",
+      "sha256": "3bb0abebd6d47f2003ffa763915aa056ffffcbe4bca4eda698b3e7e3de463a9a"
+    },
+    {
+      "path": "packages/core/src/solver/extension/challenge-observer/board-format.ts",
+      "sha256": "1a18181d4b9e9a51487e591a9f5d1c980ab434ee6bdb80d7630b69c5fdd82ff9"
+    }
+  ]
+}

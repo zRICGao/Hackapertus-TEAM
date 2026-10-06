@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "id": "foundation-check",
+  "hypothesis": "An offline fixture distinguishes a mismatch from a matched control",
+  "target": {"id": "fixture", "model": "mock-only", "revision": "fixture-v1", "mode": "mock"},
+  "cases": [
+    {"id": "probe", "role": "probe", "language": "en", "prompt": "Return A", "expected": "A"},
+    {"id": "control", "role": "control", "language": "en", "prompt": "Return B", "expected": "B"}
+  ],
+  "max_calls": 2,
+  "evaluator": "exact-text-v1"
+}

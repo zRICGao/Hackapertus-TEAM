@@ -1,0 +1,19 @@
+{
+  "reviewer": "REPLACE_WITH_HUMAN_REVIEWER",
+  "human_reviewed": false,
+  "title": "REPLACE_AFTER_REVIEW",
+  "claim": "Describe the supported behavior and its frequency.",
+  "desired_behavior": "Describe expected behavior.",
+  "impact": "Explain concrete impact with evidence.",
+  "novelty": "List dated prior-work searches and sources; do not claim novelty without evidence.",
+  "limitations": "Small sample, hosted revision unknown; describe all other limitations.",
+  "scope": "hosted_service",
+  "scope_basis": "Describe the service, observation dates and why the attribution is justified.",
+  "probe_ids": [
+    "en-probe"
+  ],
+  "severity": "1",
+  "breadth": "1",
+  "breadth_justification": "Describe affected users and evidence.",
+  "topic_area": "Instruction adherence"
+}

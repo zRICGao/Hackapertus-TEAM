@@ -1,0 +1,6 @@
+{
+  "name": "apertus-workbench",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "bun test", "demo": "bun run src/demo.ts"}
+}
